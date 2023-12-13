@@ -13,4 +13,6 @@ import lombok.ToString;
 public class User {
     private String name;
     private String value;
+    private String phoneNum;
+    private String idCard;
 }

@@ -9,6 +9,7 @@ import org.apache.commons.lang3.time.DateFormatUtils;
 import org.apache.commons.lang3.time.DateUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.ImmutableTriple;
+import org.springframework.util.Assert;
 
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;
@@ -143,12 +144,15 @@ public class TestApacheCommons {
             </dependency>
          */
         File file = new File("demo1.txt");
+        File srcFile = new File("srcFile.txt");
+        File destFile = new File("destFile.txt");
         // 读取文件
         List<String> lines = FileUtils.readLines(file, Charset.defaultCharset());
         // 写入文件
         FileUtils.writeLines(new File("demo2.txt"), lines);
         // 复制文件
         FileUtils.copyFile(srcFile, destFile);
+//        Assert.notEmpty();
     }
 
 }

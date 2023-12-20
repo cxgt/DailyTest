@@ -6,7 +6,14 @@ spring:
     username: root
     password: 123456
     url: jdbc:mysql://127.0.0.1:3306/chenxin?statementInterceptors=com/learningRoad/Interceptor/JdbcInterceptor.java
-
+  jasypt:
+  encryptor:
+    property:
+      prefix: "ENC["
+      suffix: "]"
+    password:
+    algorithm: PBEWithMD5AndDES
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
 mybatis:
   mapper-locations: classpath:mapper/*.xml
 

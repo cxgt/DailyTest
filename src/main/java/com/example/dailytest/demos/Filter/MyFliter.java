@@ -53,7 +53,6 @@ public class MyFliter implements Filter {
 
         // 解析 JSON 字符串为 JSONObject 对象
         JSONObject jsonObject = JSONObject.parseObject(originalResponseBody);
-
         // 检查 "name" 和 "id" 字段是否存在
         if (jsonObject.containsKey("name")) {
             jsonObject.put("name", desensitizeName(jsonObject.getString("name")));  // 进行脱敏操作

@@ -1,6 +1,7 @@
 package com.example.dailytest.demos.Test;
 
 import com.example.dailytest.demos.BloomFliter.MyBloomFilter;
+import org.jasypt.util.text.BasicTextEncryptor;
 
 /**
  * @author chenxin
@@ -17,5 +18,11 @@ public class Test {
 
         System.out.println(myBloomFilter.contains("cx"));
         System.out.println(myBloomFilter.contains("cxx"));
+
+        BasicTextEncryptor basicTextEncryptor=new BasicTextEncryptor();
+        basicTextEncryptor.setPassword("cxniubi");
+        String encryptText = basicTextEncryptor.encrypt("马俊雄和杜佳伟是大笨蛋");
+        System.out.println(encryptText);
+        System.out.println(basicTextEncryptor.decrypt(encryptText));
     }
 }

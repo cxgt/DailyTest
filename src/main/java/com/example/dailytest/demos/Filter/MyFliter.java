@@ -37,12 +37,12 @@ public class MyFliter implements Filter {
         // 在这里，你可以获取到接口返回的数据
         System.out.println(responseBody);
         // 在这里，你可以获取到接口返回的数据，并进行修改
-        String modifiedResponseBody = modify(responseBody);
-
-        // 将修改后的数据写回到响应中
-        responseWrapper.reset();
-        responseWrapper.setCharacterEncoding("UTF-8");
-        responseWrapper.getOutputStream().write(modifiedResponseBody.getBytes(responseWrapper.getCharacterEncoding()));
+//        String modifiedResponseBody = modify(responseBody);
+//
+//        // 将修改后的数据写回到响应中
+//        responseWrapper.reset();
+//        responseWrapper.setCharacterEncoding("UTF-8");
+//        responseWrapper.getOutputStream().write(modifiedResponseBody.getBytes(responseWrapper.getCharacterEncoding()));
 
         responseWrapper.copyBodyToResponse();
     }

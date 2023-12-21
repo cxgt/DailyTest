@@ -2,6 +2,7 @@ package com.example.dailytest.demos.Service.Impl;
 
 import com.example.dailytest.demos.Service.DesensitizationService;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 /**
@@ -9,8 +10,7 @@ import org.springframework.stereotype.Service;
  * @Description
  * @date 2023/12/19 10:02
  */
-@Service
-
+@Component("Name")
 public class DesensitizationNameServiceImpl implements DesensitizationService {
     @Override
     public String desensitizationField(String originalField) {
